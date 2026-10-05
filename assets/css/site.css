@@ -61,3 +61,20 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
   .journey>.wrap>h2,.journey>.wrap>.eyebrow{text-align:left}
   .works>.wrap>.intro{text-align:left;margin-left:0}
 }
+
+
+/* Books — alternating editorial panels */
+.books{background:#FFFDF9}
+.books .featured,
+.books .book{position:relative;border:0;padding:85px 6vw;margin:0 -6vw}
+.books .featured{background:#F2E7DE;margin-bottom:0}
+.books .book-flow{border-top:0}
+.books .book:nth-child(1){background:#FFFDF9}
+.books .book:nth-child(2){background:#F4E9E7}
+.books .book:nth-child(3){background:#F8F1E8}
+.books .book:nth-child(4){background:#EFE6DC}
+.books .book:nth-child(5){background:#FFFDF9}
+.books .featured+.book-flow{margin-top:0}
+@media(max-width:800px){
+ .books .featured,.books .book{padding:70px 6vw;margin:0 -6vw}
+}
