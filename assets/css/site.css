@@ -32,3 +32,11 @@
   .hero-image img{width:min(100%,560px);height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:50% / 44%;outline:1px solid var(--gold);outline-offset:12px;box-shadow:0 22px 55px rgba(52,35,25,.14)}
   .hero-copy{padding:2vw 3vw 2vw 0}
 }
+
+/* Definitive desktop homepage portrait */
+@media screen and (min-width:801px){
+body .hero{display:grid!important;grid-template-columns:minmax(360px,48%) 1fr!important;min-height:calc(100vh - 76px)!important;padding:55px 6vw 70px!important;gap:7vw!important;align-items:center!important}
+body .hero>.hero-image{width:100%!important;min-height:0!important;height:auto!important;overflow:visible!important;background:transparent!important;padding:18px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+body .hero>.hero-image>img{display:block!important;width:min(100%,520px)!important;height:auto!important;aspect-ratio:4/5!important;object-fit:cover!important;object-position:center top!important;border-radius:50%!important;outline:2px solid #B59A6A!important;outline-offset:12px!important;box-shadow:0 20px 50px rgba(52,35,25,.16)!important}
+body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
+}
