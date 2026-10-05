@@ -186,3 +186,79 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
   }
   .contact>.wrap>.eyebrow,.contact>.wrap>h2,.contact>.wrap>p{text-align:center}
 }
+
+
+/* Responsive reset v2 — clean mobile flow and true centered section openings */
+@media(max-width:800px){
+  .header{height:64px;padding:0 5.5vw}
+  .brand{display:block;max-width:none;white-space:nowrap;font-size:clamp(15px,4.4vw,18px);line-height:1}
+  .menu{flex:0 0 auto;margin-left:14px}
+  .header nav{
+    position:fixed;top:64px;right:0;bottom:0;left:0;
+    display:none!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:flex-start!important;
+    gap:0!important;
+    padding:18px 7vw 34px!important;
+    overflow-y:auto;
+    background:var(--ivory);
+    z-index:100;
+  }
+  .header nav.open{display:flex!important}
+  .header nav>a{
+    display:block!important;
+    width:100%;
+    margin:0!important;
+    padding:15px 0!important;
+    border-bottom:1px solid var(--line);
+    font-size:14px!important;
+    line-height:1.2!important;
+    text-align:left!important;
+    letter-spacing:.14em;
+  }
+  .header nav span{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:0!important;
+    width:100%;
+    margin:10px 0 0!important;
+    padding:8px 0 0!important;
+    border-top:0!important;
+  }
+  .header nav span a{display:block;width:100%;padding:12px 0;text-align:left}
+  body:has(.header nav.open){overflow:hidden}
+
+  .section>.wrap>.eyebrow,
+  .section>.wrap>h2,
+  .section>.wrap>.lead,
+  .section>.wrap>.intro{
+    width:min(100%,760px)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+  }
+  .section>.wrap>.intro{padding-left:0;padding-right:0}
+  .books>.wrap>.eyebrow,.books>.wrap>h2,.books>.wrap>.lead,.books>.wrap>.intro,
+  .works>.wrap>.eyebrow,.works>.wrap>h2,.works>.wrap>.intro,
+  .journey>.wrap>.eyebrow,.journey>.wrap>h2,
+  .contact>.wrap>.eyebrow,.contact>.wrap>h2,.contact>.wrap>p{
+    text-align:center!important;
+  }
+
+  .hero{padding-top:38px}
+  .hero .eyebrow{text-align:left}
+  .hero h1{text-align:left}
+
+  .featured .eyebrow,.featured h3,.featured p,
+  .book .eyebrow,.book h3,.book p,
+  .author-grid>div:last-child,
+  .movement,.steps article,.editorial-grid,.three>div{
+    text-align:left!important;
+  }
+}
+@media(max-width:390px){
+  .header{padding-left:4.5vw;padding-right:4.5vw}
+  .brand{font-size:15px}
+  .menu{font-size:10px;letter-spacing:.1em}
+}
