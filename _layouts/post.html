@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page.title }} — Maribel Benítez Osorio</title>
+<meta name="description" content="{{ page.excerpt | strip_html | escape }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css?v=20261005-0245' | relative_url }}">
+<script defer src="{{ '/assets/js/site.js?v=20261004-2318' | relative_url }}"></script>
+</head>
+<body>
+<header class="header"><a class="brand" href="{{ '/' | relative_url }}">Maribel Benítez Osorio</a><button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"></button><nav id="nav"><a href="{{ '/index.html#libros' | relative_url }}">Libros</a><a href="{{ '/blog.html' | relative_url }}">Blog</a><a href="{{ '/biografia.html' | relative_url }}">Biografía</a><a href="{{ '/index.html#obra' | relative_url }}">Obra</a><a href="{{ '/index.html#cultura' | relative_url }}">Cultura</a><a href="{{ '/index.html#contacto' | relative_url }}">Contacto</a><span><a href="https://www.facebook.com/maribel.benitez.754">Facebook</a><a href="mailto:marybtz2002@gmail.com">Correo</a></span></nav></header>
+<main>
+<article class="section post-page"><div class="wrap">
+<p class="eyebrow">{{ page.category }} · {{ page.date | date: "%d/%m/%Y" }}</p>
+<h1>{{ page.title }}</h1>
+{% if page.image %}<img class="post-hero-image" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">{% endif %}
+<div class="post-body">{{ content }}</div>
+<p class="post-back"><a class="action" href="{{ '/blog.html' | relative_url }}">← Volver al Blog</a></p>
+</div></article>
+</main>
+<footer><strong>Maribel Benítez Osorio</strong><span>Escritora · Poeta · Antologadora · Editora</span><nav><a href="{{ '/index.html#libros' | relative_url }}">Libros</a><a href="{{ '/blog.html' | relative_url }}">Blog</a><a href="{{ '/biografia.html' | relative_url }}">Biografía</a></nav><small>© 2026 Maribel Benítez Osorio</small></footer>
+</body>
+</html>
