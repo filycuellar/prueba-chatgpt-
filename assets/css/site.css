@@ -78,3 +78,49 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
 @media(max-width:800px){
  .books .featured,.books .book{padding:70px 6vw;margin:0 -6vw}
 }
+
+
+/* Typography + navigation refinement — desktop and mobile */
+:root{--content-readable:760px}
+.section>.wrap>.eyebrow,.section>.wrap>h2,.section>.wrap>.lead,.section>.wrap>.intro{max-width:var(--content-readable)}
+.section h2,.culture h2{font-size:clamp(46px,4.7vw,70px);line-height:1.02}
+.section p,.culture p{max-width:72ch}
+.header nav a{white-space:nowrap}
+@media(min-width:801px){
+  .header{padding-left:5vw;padding-right:5vw}
+  .header nav{gap:clamp(16px,1.8vw,28px)}
+  .hero h1{font-size:clamp(64px,6vw,100px);line-height:.84}
+  .hero-phrase{max-width:520px}
+  .books>.wrap>.eyebrow,.books>.wrap>h2,.books>.wrap>.lead,.books>.wrap>.intro{margin-left:0;margin-right:0;text-align:left}
+}
+@media(max-width:800px){
+  .header{padding:0 6vw}
+  .header nav{inset:64px 0 0;padding:34px 8vw 40px;gap:0;overflow-y:auto;align-items:stretch}
+  .header nav>a{display:block;padding:15px 0;border-bottom:1px solid rgba(222,212,204,.72);font-size:14px;line-height:1.25;letter-spacing:.14em}
+  .header nav span{display:flex;flex-direction:column;gap:0;padding-top:10px;margin-top:10px}
+  .header nav span a{padding:12px 0;font-size:11px}
+  .brand{max-width:72%;font-size:18px;line-height:1.05}
+  .menu{padding:10px 0}
+  .hero{padding:42px 6vw 72px}
+  .hero h1{font-size:clamp(54px,16vw,76px);line-height:.86;letter-spacing:-.035em;margin:14px 0 30px}
+  .hero-phrase{font-size:clamp(22px,6.5vw,27px);line-height:1.22}
+  .section h2,.culture h2{font-size:clamp(42px,12vw,58px);line-height:1;letter-spacing:-.02em;margin-bottom:20px}
+  .lead{font-size:clamp(25px,7vw,30px);line-height:1.22}
+  .section>.wrap>.eyebrow,.section>.wrap>h2,.section>.wrap>.lead,.section>.wrap>.intro{max-width:100%;text-align:left;margin-left:0;margin-right:0}
+  .contact>.wrap>.eyebrow,.contact>.wrap>h2,.contact>.wrap>p{text-align:left}
+  .contact-links{align-items:stretch;text-align:left;gap:18px}
+  .contact-links a{width:100%}
+  .links{flex-direction:column;align-items:stretch;gap:18px}
+  .links a{width:100%}
+  .intro{margin-bottom:55px}
+  footer nav{flex-wrap:wrap;justify-content:center;row-gap:12px}
+}
+@media(max-width:430px){
+  body{font-size:15px;line-height:1.68}
+  .section{padding:72px 6vw}
+  .header nav{padding-top:24px}
+  .header nav>a{padding:13px 0;font-size:13px}
+  .hero h1{font-size:clamp(50px,15vw,66px)}
+  .section h2,.culture h2{font-size:clamp(39px,11vw,50px)}
+  .eyebrow{margin-bottom:13px}
+}
