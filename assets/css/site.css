@@ -40,3 +40,24 @@ body .hero>.hero-image{width:100%!important;min-height:0!important;height:auto!i
 body .hero>.hero-image>img{display:block!important;width:min(100%,520px)!important;height:auto!important;aspect-ratio:4/5!important;object-fit:cover!important;object-position:center top!important;border-radius:50%!important;outline:2px solid #B59A6A!important;outline-offset:12px!important;box-shadow:0 20px 50px rgba(52,35,25,.16)!important}
 body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
 }
+
+
+/* Section rhythm — warm editorial contrast */
+.books{background:#FFFDF9}
+.author{background:#EFE6DC}
+.works{background:#F8F3EC}
+.journey{background:#F1E7DD}
+.editorial{background:#F4E9E7}
+.contact{background:#FBF7F1}
+.contact .news{margin-top:18px;padding:70px 55px 55px;background:#F2E7DE;border-top:1px solid rgba(181,154,106,.45)}
+.works>.wrap>h2,.works>.wrap>.eyebrow,
+.journey>.wrap>h2,.journey>.wrap>.eyebrow,
+.contact>.wrap>h2,.contact>.wrap>.eyebrow{text-align:center}
+.works>.wrap>.intro{margin-left:auto;margin-right:auto;text-align:center}
+.journey>.wrap>h2{max-width:900px;margin-left:auto;margin-right:auto}
+@media(max-width:800px){
+  .contact .news{padding:50px 28px 40px}
+  .works>.wrap>h2,.works>.wrap>.eyebrow,
+  .journey>.wrap>h2,.journey>.wrap>.eyebrow{text-align:left}
+  .works>.wrap>.intro{text-align:left;margin-left:0}
+}
