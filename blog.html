@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!doctype html>
 <html lang="es">
 <head>
@@ -6,7 +9,7 @@
 <meta name="description" content="Blog de Maribel Benítez Osorio: literatura, educación, cultura, paz y escritura.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261005-0201"><script defer src="assets/js/site.js?v=20261004-2318"></script>
+<link rel="stylesheet" href="assets/css/site.css?v=20261005-0245"><script defer src="assets/js/site.js?v=20261004-2318"></script>
 </head>
 <body>
 <header class="header"><a class="brand" href="index.html">Maribel Benítez Osorio</a><button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"></button><nav id="nav"><a href="index.html#libros">Libros</a><a href="blog.html">Blog</a><a href="biografia.html">Biografía</a><a href="index.html#obra">Obra</a><a href="index.html#cultura">Cultura</a><a href="index.html#contacto">Contacto</a><span><a href="https://www.facebook.com/maribel.benitez.754">Facebook</a><a href="mailto:marybtz2002@gmail.com">Correo</a></span></nav></header>
@@ -15,10 +18,21 @@
 <section class="section blog-page"><div class="wrap">
 <div class="blog-intro"><p class="eyebrow">Publicaciones</p><h2>Desde el escritorio de Maribel</h2><p class="intro">Aquí aparecerán artículos, reflexiones, noticias literarias y textos de Maribel Benítez Osorio. La estructura está preparada para incorporar nuevas publicaciones conservando la identidad editorial del sitio.</p></div>
 <div class="blog-grid">
-<article class="blog-card blog-feature"><div class="blog-image"><img src="assets/maribel-cultura.png" alt="Maribel Benítez Osorio en actividad cultural"></div><div><p class="eyebrow">Literatura · Cultura</p><h3>Próxima publicación</h3><p>El primer artículo de Maribel ocupará este espacio principal. Podrá incluir fotografía, fecha, categoría, introducción y el texto completo en su propia página.</p><span class="blog-status">Artículo en preparación</span></div></article>
-<article class="blog-card"><p class="eyebrow">Escritura</p><h3>El oficio de escribir</h3><p>Espacio reservado para reflexiones sobre creación, libros y el camino que lleva una idea hasta convertirse en obra.</p><span class="blog-status">Próximamente</span></article>
-<article class="blog-card"><p class="eyebrow">Educación</p><h3>Leer para imaginar y aprender</h3><p>Un espacio para textos relacionados con educación, lectura y literatura para nuevas generaciones.</p><span class="blog-status">Próximamente</span></article>
-<article class="blog-card"><p class="eyebrow">Cultura y paz</p><h3>La palabra como encuentro</h3><p>Reflexiones y noticias sobre proyectos culturales, escritores, artistas y actividades alrededor de una cultura de paz.</p><span class="blog-status">Próximamente</span></article>
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+  <article class="blog-card{% if forloop.first %} blog-feature{% endif %}">
+    {% if post.image %}<div class="blog-image"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}"></div>{% endif %}
+    <div>
+      <p class="eyebrow">{{ post.category }}</p>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+      <span class="blog-status">{{ post.date | date: "%d/%m/%Y" }}</span>
+    </div>
+  </article>
+  {% endfor %}
+{% else %}
+  <article class="blog-card blog-feature"><div class="blog-image"><img src="assets/maribel-cultura.png" alt="Maribel Benítez Osorio en actividad cultural"></div><div><p class="eyebrow">Literatura · Cultura</p><h3>Próxima publicación</h3><p>El Blog está preparado para recibir las publicaciones de Maribel directamente desde su panel editorial.</p><span class="blog-status">Artículo en preparación</span></div></article>
+{% endif %}
 </div>
 </div></section>
 </main>
