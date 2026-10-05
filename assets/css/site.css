@@ -419,3 +419,40 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     text-align:left!important;
   }
 }
+
+
+/* Mobile hero compact rhythm — keep approved typography/photo */
+@media(max-width:800px){
+  .hero{
+    padding:26px 6vw 48px!important;
+  }
+  .hero h1{
+    margin-top:8px!important;
+    margin-bottom:22px!important;
+  }
+  .hero-phrase{
+    margin:0 auto 20px!important;
+    line-height:1.16!important;
+  }
+  .hero .links{
+    width:100%!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:18px!important;
+    margin:0!important;
+  }
+  .hero .links a{
+    margin:0!important;
+  }
+  .hero .hero-facebook{
+    margin-top:0!important;
+  }
+  .hero .location{
+    margin:26px 0 22px!important;
+  }
+  .hero-image{
+    margin:0!important;
+  }
+}
