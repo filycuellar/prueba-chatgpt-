@@ -274,3 +274,54 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
   .brand{font-size:14px!important}
   .hero h1,.author h2{font-size:clamp(24px,7vw,30px)!important}
 }
+
+
+/* =========================================================
+   VISUAL POLISH — title hierarchy, GRUEM alignment, menu
+   ========================================================= */
+@media(max-width:800px){
+  /* Main identity is the page title: give it stronger hierarchy */
+  .hero h1{
+    font-size:clamp(29px,8.2vw,36px)!important;
+    font-weight:600!important;
+    letter-spacing:-.04em!important;
+    margin-top:16px!important;
+    margin-bottom:32px!important;
+  }
+  .hero .eyebrow{
+    font-size:10px!important;
+    letter-spacing:.17em!important;
+    margin-bottom:8px!important;
+  }
+
+  /* GRUEM: heading centered, prose justified */
+  #gruem>.wrap>.eyebrow,
+  #gruem>.wrap>h2{
+    text-align:center!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  #gruem .dark-intro{
+    width:100%!important;
+    max-width:100%!important;
+    text-align:justify!important;
+    text-justify:inter-word!important;
+    hyphens:auto!important;
+    -webkit-hyphens:auto!important;
+  }
+
+  /* Menu panel: guarantee every direct item and utility link is visible */
+  #nav.open{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    height:auto!important;
+    max-height:calc(100dvh - 64px)!important;
+  }
+  #nav.open>a,
+  #nav.open>span,
+  #nav.open>span>a{
+    visibility:visible!important;
+    opacity:1!important;
+  }
+}
