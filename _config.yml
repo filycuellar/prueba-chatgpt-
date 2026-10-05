@@ -1,0 +1,10 @@
+title: Maribel Benítez Osorio
+description: Sitio oficial de Maribel Benítez Osorio
+lang: es
+permalink: /blog/:year/:month/:day/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
