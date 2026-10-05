@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: filycuellar/prueba_maribel
+  branch: main
+
+locale: es
+site_url: https://filycuellar.github.io
+display_url: https://filycuellar.github.io
+logo_url: https://filycuellar.github.io/assets/maribel-hero.png
+
+media_folder: "assets/blog"
+public_folder: "/assets/blog"
+
+publish_mode: simple
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Artículo"
+    folder: "content/blog"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
+      - label: "Categoría"
+        name: "category"
+        widget: "select"
+        options:
+          - "Literatura"
+          - "Poesía"
+          - "Educación"
+          - "Cultura"
+          - "Paz"
+          - "Escritura"
+          - "Noticias"
+      - { label: "Imagen principal", name: "image", widget: "image", required: false }
+      - { label: "Resumen", name: "excerpt", widget: "text", hint: "Texto breve que aparecerá en la página principal del Blog." }
+      - { label: "Contenido", name: "body", widget: "markdown" }
