@@ -514,3 +514,8 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     font-size:clamp(19px,5.3vw,22px)!important;
   }
 }
+
+@media(max-width:800px){
+  .hero .links{margin-bottom:8px!important}
+  .hero-image{margin-top:0!important;padding-top:2px!important}
+}
