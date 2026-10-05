@@ -182,125 +182,95 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
 }
 
 
+
 /* =========================================================
-   APPROVED MOBILE REFINEMENT — 2026-10-04
+   FINAL MOBILE FIX — identity, copy and navigation
    ========================================================= */
-
-/* Reading copy: equal visual edges */
-.section>.wrap>.intro,
-.featured p:not(.eyebrow),.book p:not(.eyebrow),
-.author p,.movement p,.steps p,.three p,
-.editorial-grid p,.culture-copy>p,.news p,
-.bio-hero p:not(.eyebrow):not(.lead){
-  text-align:justify;
-  text-justify:inter-word;
-  hyphens:auto;
-}
-
-/* Hero identity: one line, centered */
-.hero h1{
-  white-space:nowrap;
-  text-align:center;
-  font-size:clamp(42px,5.2vw,78px);
-  line-height:1;
-  letter-spacing:-.025em;
-}
-
-/* Author section identity */
-.author h2{
-  text-align:center;
-  white-space:nowrap;
-  font-size:clamp(34px,4vw,52px);
-}
-.author h4{text-align:center}
-
-/* Compact hamburger control */
-.menu{
-  width:38px;
-  height:38px;
-  padding:0;
-  align-items:center;
-  justify-content:center;
-  font-size:0!important;
-  cursor:pointer;
-}
-.menu::before{
-  content:"☰";
-  font-family:Arial,sans-serif;
-  font-size:24px;
-  font-weight:300;
-  line-height:1;
-  color:var(--ink);
-}
-.menu[aria-expanded="true"]::before{
-  content:"×";
-  font-size:30px;
-}
-
 @media(max-width:800px){
-  .brand{font-size:15px;white-space:nowrap}
-  .menu{display:flex!important;flex:0 0 38px;margin-left:10px}
-
-  .hero h1{
-    white-space:nowrap;
-    font-size:clamp(29px,8vw,40px);
-    line-height:1;
-    letter-spacing:-.03em;
+  /* Brand and compact hamburger */
+  .brand{font-size:15px!important;white-space:nowrap!important}
+  .menu{
+    display:flex!important;width:36px!important;height:36px!important;
+    flex:0 0 36px!important;margin-left:10px!important;padding:0!important;
+    align-items:center!important;justify-content:center!important;
+    font-size:0!important;line-height:0!important;color:transparent!important;
   }
-
-  .author h2{
-    white-space:nowrap;
-    font-size:clamp(29px,8vw,40px);
-    line-height:1.05;
+  .menu::before{
+    content:"☰"!important;color:var(--ink)!important;
+    font:300 23px/1 Arial,sans-serif!important;
   }
-  .author h4{
-    text-align:center;
-    font-size:clamp(23px,6.5vw,29px);
-    line-height:1.15;
-  }
+  .menu[aria-expanded="true"]::before{content:"×"!important;font-size:29px!important}
 
-  .section>.wrap>.intro,
-  .featured p:not(.eyebrow),.book p:not(.eyebrow),
-  .author p,.movement p,.steps p,.three p,
-  .editorial-grid p,.culture-copy>p,.news p,
-  .bio-hero p:not(.eyebrow):not(.lead){
-    width:100%;
-    max-width:100%;
-    text-align:justify;
-    text-justify:inter-word;
-    hyphens:auto;
-  }
-
+  /* Full mobile navigation */
   .header nav{
-    top:64px!important;
-    right:0!important;
-    bottom:0!important;
-    left:0!important;
-    padding:20px 7vw 36px!important;
-    overflow-y:auto!important;
+    position:fixed!important;inset:64px 0 0!important;z-index:9999!important;
+    display:none!important;flex-direction:column!important;
+    align-items:stretch!important;justify-content:flex-start!important;
+    gap:0!important;padding:20px 7vw 36px!important;overflow-y:auto!important;
+    background:var(--ivory)!important;
   }
   .header nav.open{display:flex!important}
   .header nav>a{
-    display:block!important;
-    width:100%!important;
-    min-height:0!important;
-    padding:15px 0!important;
-    border-bottom:1px solid var(--line)!important;
-    font-size:13px!important;
-    line-height:1.2!important;
-    text-align:left!important;
+    display:block!important;width:100%!important;margin:0!important;
+    padding:15px 0!important;border-bottom:1px solid var(--line)!important;
+    font-size:13px!important;line-height:1.2!important;letter-spacing:.14em!important;
+    text-align:left!important;white-space:nowrap!important;
   }
   .header nav span{
-    display:flex!important;
-    flex-direction:column!important;
-    width:100%!important;
-    margin-top:10px!important;
-    padding-top:8px!important;
+    display:flex!important;flex-direction:column!important;width:100%!important;
+    gap:0!important;margin:10px 0 0!important;padding:8px 0 0!important;
+    border-top:1px solid var(--line)!important;
   }
+  .header nav span a{display:block!important;padding:12px 0!important;font-size:11px!important}
+
+  /* Hero: override display:contents so the name has a real full-width box */
+  .hero{
+    display:flex!important;flex-direction:column!important;
+    padding:42px 6vw 72px!important;
+  }
+  .hero-copy{
+    display:flex!important;flex-direction:column!important;
+    width:100%!important;align-items:center!important;text-align:center!important;
+  }
+  .hero .eyebrow{order:1!important;width:100%!important;text-align:center!important}
+  .hero h1{
+    order:2!important;width:100%!important;max-width:none!important;
+    margin:12px auto 28px!important;padding:0!important;
+    white-space:nowrap!important;text-align:center!important;
+    font-size:clamp(25px,7.25vw,32px)!important;
+    line-height:1!important;letter-spacing:-.035em!important;
+  }
+  .hero-image{order:3!important;width:100%!important;margin:0 0 32px!important}
+  .hero-phrase{order:4!important}
+  .hero .links{order:5!important}
+  .hero .location{order:6!important}
+
+  /* Section title grammar */
+  .section>.wrap>.eyebrow,.section>.wrap>h2,.section>.wrap>.lead,
+  .featured .eyebrow,.featured h3,.book .eyebrow,.book h3{
+    text-align:center!important;margin-left:auto!important;margin-right:auto!important;
+  }
+
+  /* Reading copy: justified with equal left/right edges */
+  .section>.wrap>.intro,
+  .featured>div>p:not(.eyebrow),.book>div>p:not(.eyebrow),
+  .author-grid>div:last-child>p,.movement p,.steps p,.three p,
+  .editorial-grid p,.culture-copy>p,.news p{
+    width:100%!important;max-width:100%!important;
+    text-align:justify!important;text-justify:inter-word!important;
+    hyphens:auto!important;-webkit-hyphens:auto!important;
+  }
+
+  /* Author section identity */
+  .author h2{
+    width:100%!important;max-width:none!important;
+    white-space:nowrap!important;text-align:center!important;
+    font-size:clamp(25px,7.25vw,32px)!important;line-height:1!important;
+  }
+  .author h4{text-align:center!important;font-size:clamp(22px,6vw,28px)!important;line-height:1.18!important}
 }
 
 @media(max-width:430px){
-  .brand{font-size:14px}
-  .hero h1{font-size:clamp(27px,7.7vw,33px)}
-  .author h2{font-size:clamp(27px,7.7vw,33px)}
+  .brand{font-size:14px!important}
+  .hero h1,.author h2{font-size:clamp(24px,7vw,30px)!important}
 }
