@@ -180,3 +180,127 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
   .section{padding:68px 6vw}
   .books>.wrap>.intro{margin-bottom:38px}
 }
+
+
+/* =========================================================
+   APPROVED MOBILE REFINEMENT — 2026-10-04
+   ========================================================= */
+
+/* Reading copy: equal visual edges */
+.section>.wrap>.intro,
+.featured p:not(.eyebrow),.book p:not(.eyebrow),
+.author p,.movement p,.steps p,.three p,
+.editorial-grid p,.culture-copy>p,.news p,
+.bio-hero p:not(.eyebrow):not(.lead){
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+}
+
+/* Hero identity: one line, centered */
+.hero h1{
+  white-space:nowrap;
+  text-align:center;
+  font-size:clamp(42px,5.2vw,78px);
+  line-height:1;
+  letter-spacing:-.025em;
+}
+
+/* Author section identity */
+.author h2{
+  text-align:center;
+  white-space:nowrap;
+  font-size:clamp(34px,4vw,52px);
+}
+.author h4{text-align:center}
+
+/* Compact hamburger control */
+.menu{
+  width:38px;
+  height:38px;
+  padding:0;
+  align-items:center;
+  justify-content:center;
+  font-size:0!important;
+  cursor:pointer;
+}
+.menu::before{
+  content:"☰";
+  font-family:Arial,sans-serif;
+  font-size:24px;
+  font-weight:300;
+  line-height:1;
+  color:var(--ink);
+}
+.menu[aria-expanded="true"]::before{
+  content:"×";
+  font-size:30px;
+}
+
+@media(max-width:800px){
+  .brand{font-size:15px;white-space:nowrap}
+  .menu{display:flex!important;flex:0 0 38px;margin-left:10px}
+
+  .hero h1{
+    white-space:nowrap;
+    font-size:clamp(29px,8vw,40px);
+    line-height:1;
+    letter-spacing:-.03em;
+  }
+
+  .author h2{
+    white-space:nowrap;
+    font-size:clamp(29px,8vw,40px);
+    line-height:1.05;
+  }
+  .author h4{
+    text-align:center;
+    font-size:clamp(23px,6.5vw,29px);
+    line-height:1.15;
+  }
+
+  .section>.wrap>.intro,
+  .featured p:not(.eyebrow),.book p:not(.eyebrow),
+  .author p,.movement p,.steps p,.three p,
+  .editorial-grid p,.culture-copy>p,.news p,
+  .bio-hero p:not(.eyebrow):not(.lead){
+    width:100%;
+    max-width:100%;
+    text-align:justify;
+    text-justify:inter-word;
+    hyphens:auto;
+  }
+
+  .header nav{
+    top:64px!important;
+    right:0!important;
+    bottom:0!important;
+    left:0!important;
+    padding:20px 7vw 36px!important;
+    overflow-y:auto!important;
+  }
+  .header nav.open{display:flex!important}
+  .header nav>a{
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    padding:15px 0!important;
+    border-bottom:1px solid var(--line)!important;
+    font-size:13px!important;
+    line-height:1.2!important;
+    text-align:left!important;
+  }
+  .header nav span{
+    display:flex!important;
+    flex-direction:column!important;
+    width:100%!important;
+    margin-top:10px!important;
+    padding-top:8px!important;
+  }
+}
+
+@media(max-width:430px){
+  .brand{font-size:14px}
+  .hero h1{font-size:clamp(27px,7.7vw,33px)}
+  .author h2{font-size:clamp(27px,7.7vw,33px)}
+}
