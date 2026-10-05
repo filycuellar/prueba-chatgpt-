@@ -456,3 +456,61 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     margin:0!important;
   }
 }
+
+
+/* Mobile hero hierarchy — author first, supporting copy second */
+@media(max-width:800px){
+  .hero{
+    padding:18px 6vw 38px!important;
+  }
+  .hero .eyebrow{
+    display:none!important;
+  }
+  .hero h1{
+    display:block!important;
+    order:1!important;
+    width:100%!important;
+    margin:0 auto 16px!important;
+    font-size:clamp(30px,8.4vw,36px)!important;
+    line-height:1!important;
+    font-weight:600!important;
+    letter-spacing:-.035em!important;
+    white-space:nowrap!important;
+    text-align:center!important;
+  }
+  .hero-phrase{
+    order:2!important;
+    width:min(100%,560px)!important;
+    margin:0 auto 18px!important;
+    font-size:clamp(20px,5.7vw,24px)!important;
+    line-height:1.18!important;
+    font-weight:500!important;
+    text-align:center!important;
+  }
+  .hero .links{
+    order:3!important;
+    gap:11px!important;
+    margin:0 auto!important;
+  }
+  .hero .links a{
+    padding-bottom:3px!important;
+  }
+  .hero .location{
+    order:4!important;
+    margin:18px 0 14px!important;
+  }
+  .hero-image{
+    order:5!important;
+    width:100%!important;
+    margin:0!important;
+    padding:8px!important;
+  }
+}
+@media(max-width:430px){
+  .hero h1{
+    font-size:clamp(28px,7.8vw,33px)!important;
+  }
+  .hero-phrase{
+    font-size:clamp(19px,5.3vw,22px)!important;
+  }
+}
