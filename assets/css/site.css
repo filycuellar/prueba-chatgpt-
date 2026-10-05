@@ -124,3 +124,65 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
   .section h2,.culture h2{font-size:clamp(39px,11vw,50px)}
   .eyebrow{margin-bottom:13px}
 }
+
+
+/* Global section-heading system — centered openings, left-aligned content */
+.section>.wrap>.eyebrow,
+.section>.wrap>h2,
+.section>.wrap>.lead,
+.section>.wrap>.intro{
+  max-width:820px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.section>.wrap>.intro{max-width:760px}
+.section>.wrap>.lead{max-width:780px}
+.author .author-grid>.portrait + div>.eyebrow,
+.author .author-grid>.portrait + div>h2,
+.author .author-grid>.portrait + div>h4,
+.author .author-grid>.portrait + div>p,
+.author .author-grid>.portrait + div>blockquote,
+.featured .eyebrow,.featured h3,.featured p,
+.book .eyebrow,.book h3,.book p,
+.movement .eyebrow,.movement h3,
+.editorial-grid .eyebrow,.editorial-grid h2,.editorial-grid h3,.editorial-grid p,
+.steps h3,.steps p,
+.three h3,.three p{
+  text-align:left;
+}
+.culture-copy>.eyebrow,.culture-copy>h2{
+  text-align:center;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.culture-copy>p,.culture-copy>h3,.culture-copy>.action{text-align:left}
+.books>.wrap>.intro{margin-bottom:58px}
+@media(min-width:801px){
+  .books>.wrap>.eyebrow,.books>.wrap>h2,.books>.wrap>.lead,.books>.wrap>.intro{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+}
+@media(max-width:800px){
+  .section>.wrap>.eyebrow,
+  .section>.wrap>h2,
+  .section>.wrap>.lead,
+  .section>.wrap>.intro{
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+  .books>.wrap>.intro{margin-bottom:42px}
+  .featured .eyebrow,.featured h3,.featured p,
+  .book .eyebrow,.book h3,.book p,
+  .movement .eyebrow,.movement h3,
+  .steps h3,.steps p,
+  .editorial-grid .eyebrow,.editorial-grid h2,.editorial-grid h3,.editorial-grid p{
+    text-align:left;
+  }
+  .contact>.wrap>.eyebrow,.contact>.wrap>h2,.contact>.wrap>p{text-align:center}
+}
