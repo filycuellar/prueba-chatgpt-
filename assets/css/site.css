@@ -24,3 +24,11 @@
 .hero .portrait img,.hero-image img,.hero-photo img{border-radius:48% 48% 46% 46% / 38% 38% 55% 55%;outline:1px solid rgba(166,119,54,.65);outline-offset:10px;box-shadow:0 18px 50px rgba(52,35,25,.12)}
 .hero-facebook{display:inline-block;margin-top:16px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:6px}
 @media(max-width:800px){.hero .portrait img,.hero-image img,.hero-photo img{outline-offset:6px}}
+
+/* Homepage hero portrait — framed editorial treatment */
+@media(min-width:801px){
+  .hero{grid-template-columns:52% 48%;align-items:center;min-height:calc(100vh - 76px);padding:4vw 5vw 5vw;gap:6vw}
+  .hero-image{min-height:0;height:auto;overflow:visible;background:transparent;display:flex;align-items:center;justify-content:center;padding:18px}
+  .hero-image img{width:min(100%,560px);height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:50% / 44%;outline:1px solid var(--gold);outline-offset:12px;box-shadow:0 22px 55px rgba(52,35,25,.14)}
+  .hero-copy{padding:2vw 3vw 2vw 0}
+}
