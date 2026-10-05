@@ -325,3 +325,39 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     opacity:1!important;
   }
 }
+
+
+/* Final editorial hierarchy: section labels/titles centered, body justified, quotes independent */
+.works>.wrap>.eyebrow,
+.works>.wrap>h2{
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+.works>.wrap>.intro{
+  text-align:justify!important;
+  text-justify:inter-word!important;
+  hyphens:auto!important;
+  -webkit-hyphens:auto!important;
+}
+.author blockquote{
+  text-align:left!important;
+  text-justify:auto!important;
+  hyphens:none!important;
+  -webkit-hyphens:none!important;
+}
+@media(max-width:800px){
+  .works>.wrap>.eyebrow,
+  .works>.wrap>h2{
+    text-align:center!important;
+  }
+  .works>.wrap>.intro{
+    width:100%!important;
+    max-width:100%!important;
+    text-align:justify!important;
+  }
+  .author blockquote{
+    width:auto!important;
+    text-align:left!important;
+  }
+}
