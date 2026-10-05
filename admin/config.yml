@@ -17,7 +17,7 @@ collections:
   - name: "blog"
     label: "Blog"
     label_singular: "Artículo"
-    folder: "content/blog"
+    folder: "_posts"
     create: true
     delete: true
     extension: "md"
