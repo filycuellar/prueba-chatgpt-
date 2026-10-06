@@ -732,3 +732,30 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     padding-bottom:46px!important;
   }
 }
+
+
+/* MOBILE BOOK BLOCK COMPACTION — reduce the whole panel, not the cover */
+@media(max-width:800px){
+  .books .featured,
+  .books .book,
+  .books .book.reverse{
+    padding-top:30px!important;
+    padding-bottom:30px!important;
+    gap:24px!important;
+    min-height:0!important;
+  }
+  .books .featured .cover,
+  .books .book .cover{
+    margin:0!important;
+    padding:0!important;
+  }
+  .books .featured h3,
+  .books .book h3{
+    margin-bottom:12px!important;
+  }
+  .books .featured p,
+  .books .book p{
+    margin-top:8px!important;
+    margin-bottom:10px!important;
+  }
+}
