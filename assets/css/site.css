@@ -782,3 +782,20 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     margin:0 0 20px!important;
   }
 }
+
+
+/* MOBILE HERO FINAL — visible portrait reduction and correct location order */
+@media(max-width:800px){
+  .hero .hero-image{
+    width:84%!important;
+    max-width:390px!important;
+  }
+  .hero .hero-location{
+    order:5!important;
+    display:block!important;
+    margin:0 0 20px!important;
+  }
+  .hero .links{
+    order:6!important;
+  }
+}
