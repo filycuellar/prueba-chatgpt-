@@ -601,3 +601,34 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
  .post-hero-image{margin-bottom:35px}
  .post-body{font-size:16px;line-height:1.8}
 }
+
+
+/* =========================================================
+   GLOBAL READING ALIGNMENT — all viewport sizes
+   Body copy stays flush-left; editorial headings stay centered.
+   ========================================================= */
+.section>.wrap>.intro,
+.featured>div>p:not(.eyebrow),
+.book>div>p:not(.eyebrow),
+.author-grid>div:last-child>p,
+.movement p,
+.steps p,
+.three p,
+.editorial-grid p,
+.culture-copy>p,
+.news p,
+#gruem .dark-intro,
+.works>.wrap>.intro,
+.blog-hero .wrap>p:last-child,
+.blog-intro .intro,
+.blog-card>p:not(.eyebrow),
+.blog-card>div>p:not(.eyebrow),
+.post-body p,
+.error-copy{
+  text-align:left!important;
+  text-justify:auto!important;
+  hyphens:none!important;
+  -webkit-hyphens:none!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+}
