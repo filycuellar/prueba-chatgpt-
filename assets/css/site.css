@@ -759,3 +759,26 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     margin-bottom:10px!important;
   }
 }
+
+
+/* HERO PORTRAIT — slightly smaller + location */
+.hero .hero-image img{
+  width:min(92%,470px)!important;
+}
+.hero .hero-location{
+  margin:0 0 24px!important;
+}
+@media(max-width:800px){
+  .hero .hero-image{
+    width:92%!important;
+    max-width:430px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .hero .hero-image img{
+    width:100%!important;
+  }
+  .hero .hero-location{
+    margin:0 0 20px!important;
+  }
+}
