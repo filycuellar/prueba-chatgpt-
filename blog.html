@@ -1,5 +1,6 @@
 ---
 layout: null
+permalink: /blog/
 ---
 <!doctype html>
 <html lang="es">
@@ -9,10 +10,10 @@ layout: null
 <meta name="description" content="Blog de Maribel Benítez Osorio: literatura, educación, cultura, paz y escritura.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20261005-0245"><script defer src="assets/js/site.js?v=20261004-2318"></script>
+<link rel="stylesheet" href="{{ '/assets/css/site.css?v=20261006-blog' | relative_url }}"><script defer src="{{ '/assets/js/site.js?v=20261004-2318' | relative_url }}"></script>
 </head>
 <body>
-<header class="header"><a class="brand" href="index.html">Maribel Benítez Osorio</a><button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"></button><nav id="nav"><a href="index.html#libros">Libros</a><a href="blog.html">Blog</a><a href="biografia.html">Biografía</a><a href="index.html#obra">Obra</a><a href="index.html#cultura">Cultura</a><a href="index.html#contacto">Contacto</a><span><a href="https://www.facebook.com/maribel.benitez.754">Facebook</a><a href="mailto:marybtz2002@gmail.com">Correo</a></span></nav></header>
+<header class="header"><a class="brand" href="{{ '/' | relative_url }}">Maribel Benítez Osorio</a><button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"></button><nav id="nav"><a href="{{ '/#libros' | relative_url }}">Libros</a><a href="{{ '/blog/' | relative_url }}">Blog</a><a href="{{ '/biografia.html' | relative_url }}">Biografía</a><a href="{{ '/#obra' | relative_url }}">Obra</a><a href="{{ '/#cultura' | relative_url }}">Cultura</a><a href="{{ '/#contacto' | relative_url }}">Contacto</a><span><a href="https://www.facebook.com/maribel.benitez.754">Facebook</a><a href="mailto:marybtz2002@gmail.com">Correo</a></span></nav></header>
 <main>
 <section class="blog-hero"><div class="wrap"><p class="eyebrow">Blog de la autora</p><h1>Palabras, ideas<br>y encuentros</h1><p>Un espacio para compartir literatura, educación, cultura, paz y el oficio de escribir.</p></div></section>
 <section class="section blog-page"><div class="wrap">
@@ -31,10 +32,10 @@ layout: null
   </article>
   {% endfor %}
 {% else %}
-  <article class="blog-card blog-feature"><div class="blog-image"><img src="assets/maribel-cultura.png" alt="Maribel Benítez Osorio en actividad cultural"></div><div><p class="eyebrow">Literatura · Cultura</p><h3>Próxima publicación</h3><p>El Blog está preparado para recibir las publicaciones de Maribel directamente desde su panel editorial.</p><span class="blog-status">Artículo en preparación</span></div></article>
+  <article class="blog-card blog-feature"><div class="blog-image"><img src="{{ '/assets/maribel-cultura.png' | relative_url }}" alt="Maribel Benítez Osorio en actividad cultural"></div><div><p class="eyebrow">Literatura · Cultura</p><h3>Próxima publicación</h3><p>El Blog está preparado para recibir las publicaciones de Maribel directamente desde su panel editorial.</p><span class="blog-status">Artículo en preparación</span></div></article>
 {% endif %}
 </div>
 </div></section>
 </main>
-<footer><strong>Maribel Benítez Osorio</strong><span>Escritora · Poeta · Antologadora · Editora</span><span>Toluca, Estado de México</span><nav><a href="index.html#libros">Libros</a><a href="blog.html">Blog</a><a href="biografia.html">Biografía</a><a href="index.html#obra">Obra</a><a href="index.html#cultura">Cultura</a><a href="index.html#contacto">Contacto</a></nav><small>© 2026 Maribel Benítez Osorio</small></footer>
+<footer><strong>Maribel Benítez Osorio</strong><span>Escritora · Poeta · Antologadora · Editora</span><span>Toluca, Estado de México</span><nav><a href="{{ '/#libros' | relative_url }}">Libros</a><a href="{{ '/blog/' | relative_url }}">Blog</a><a href="{{ '/biografia.html' | relative_url }}">Biografía</a><a href="{{ '/#obra' | relative_url }}">Obra</a><a href="{{ '/#cultura' | relative_url }}">Cultura</a><a href="{{ '/#contacto' | relative_url }}">Contacto</a></nav><small>© 2026 Maribel Benítez Osorio</small></footer>
 </body></html>
