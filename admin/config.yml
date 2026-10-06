@@ -23,12 +23,12 @@ auth:
   avatar_url_claim: avatar_url
 
 locale: es
-site_url: https://filycuellar.github.io
-display_url: https://filycuellar.github.io
+site_url: https://filycuellar.github.io/prueba_maribel/
+display_url: https://filycuellar.github.io/prueba_maribel/
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 media_folder: "assets/blog"
-public_folder: "/assets/blog"
+public_folder: "/prueba_maribel/assets/blog"
 
 publish_mode: simple
 
