@@ -696,3 +696,24 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     overflow-wrap:normal!important;
   }
 }
+
+
+/* BOOK COVER SCALE — preserve editorial composition */
+.books .featured .cover img{
+  width:100%!important;
+  max-width:350px!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+}
+.books .book .cover img{
+  width:100%!important;
+  max-width:270px!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+}
+@media(max-width:800px){
+  .books .featured .cover img{max-width:230px!important}
+  .books .book .cover img{max-width:210px!important}
+}
