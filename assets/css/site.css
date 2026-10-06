@@ -632,3 +632,37 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
   word-break:normal!important;
   overflow-wrap:break-word!important;
 }
+
+
+/* Header featured links — biography + Facebook */
+.header-featured{
+  display:flex;align-items:center;gap:18px;margin-left:auto;margin-right:24px;
+  font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;
+}
+.header-featured>a{white-space:nowrap}
+.header-featured>a:first-child{border-bottom:1px solid var(--gold);padding-bottom:3px}
+.header-facebook{display:flex;align-items:center;gap:6px}
+.facebook-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:19px;height:19px;border-radius:50%;background:var(--wine);color:var(--ivory);
+  font:600 14px/1 Arial,sans-serif;text-transform:none;letter-spacing:0;
+}
+@media(max-width:800px){
+  .header{gap:8px}
+  .header-featured{gap:10px;margin-left:auto;margin-right:2px;font-size:8px;letter-spacing:.06em}
+  .header-featured>a:first-child{padding-bottom:2px}
+  .header-facebook{gap:4px}
+  .facebook-icon{width:18px;height:18px;font-size:13px}
+  .menu{margin-left:2px!important}
+}
+@media(max-width:560px){
+  .header{padding-left:4.5vw;padding-right:4.5vw}
+  .brand{font-size:13px!important}
+  .header-featured{gap:8px;font-size:7.5px}
+  .header-facebook span:last-child{display:none}
+  .facebook-icon{width:19px;height:19px}
+}
+@media(max-width:390px){
+  .brand{font-size:12px!important}
+  .header-featured{font-size:7px;gap:6px}
+}
