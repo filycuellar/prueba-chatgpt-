@@ -717,3 +717,18 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
   .books .featured .cover img{max-width:230px!important}
   .books .book .cover img{max-width:210px!important}
 }
+
+
+/* COMPACT BOOK SECTIONS — keep one-book editorial layout */
+.books .featured,
+.books .book{
+  padding-top:52px!important;
+  padding-bottom:52px!important;
+}
+@media(max-width:800px){
+  .books .featured,
+  .books .book{
+    padding-top:46px!important;
+    padding-bottom:46px!important;
+  }
+}
