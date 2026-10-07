@@ -799,3 +799,26 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     order:6!important;
   }
 }
+
+
+/* HEADER SPACING — prevent featured links from colliding with navigation */
+@media(min-width:801px){
+  .header{
+    height:88px!important;
+    padding-left:max(3vw,24px)!important;
+    padding-right:max(3vw,24px)!important;
+  }
+  .brand{font-size:17px!important}
+  .header-featured{
+    gap:12px!important;
+    margin-left:20px!important;
+    margin-right:18px!important;
+    font-size:8.5px!important;
+    letter-spacing:.08em!important;
+  }
+  .header nav{
+    gap:18px!important;
+    font-size:9.5px!important;
+    letter-spacing:.10em!important;
+  }
+}
