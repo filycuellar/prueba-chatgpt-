@@ -1,6 +1,8 @@
 title: Maribel Benítez Osorio
 description: Sitio oficial de Maribel Benítez Osorio
 lang: es
+url: "https://filycuellar.github.io"
+baseurl: "/prueba_maribel"
 permalink: /blog/:year/:month/:day/:title/
 defaults:
   - scope:
