@@ -10,10 +10,10 @@ permalink: /blog/
 <meta name="description" content="Blog de Maribel Benítez Osorio: literatura, educación, cultura, paz y escritura.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ '/assets/css/site.css?v=20261006-blog' | relative_url }}"><script defer src="{{ '/assets/js/site.js?v=20261004-2318' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/site.css?v=20261006-blog2' | relative_url }}"><script defer src="{{ '/assets/js/site.js?v=20261006-header4' | relative_url }}"></script>
 </head>
 <body>
-<header class="header"><a class="brand" href="{{ '/' | relative_url }}">Maribel Benítez Osorio</a><button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"></button><nav id="nav"><a href="{{ '/#libros' | relative_url }}">Libros</a><a href="{{ '/blog/' | relative_url }}">Blog</a><a href="{{ '/biografia.html' | relative_url }}">Biografía</a><a href="{{ '/#obra' | relative_url }}">Obra</a><a href="{{ '/#cultura' | relative_url }}">Cultura</a><a href="{{ '/#contacto' | relative_url }}">Contacto</a><span><a href="https://www.facebook.com/maribel.benitez.754">Facebook</a><a href="mailto:marybtz2002@gmail.com">Correo</a></span></nav></header>
+<header class="header"><a class="brand" href="{{ '/' | relative_url }}">Maribel Benítez Osorio</a><div class="header-featured"><a href="{{ '/biografia.html' | relative_url }}">Conocer a Maribel</a><a class="header-facebook" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/maribel.benitez.754" aria-label="Facebook de Maribel"><span class="facebook-icon" aria-hidden="true">f</span><span>Facebook</span></a></div><button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"></button><nav id="nav"><a href="{{ '/#libros' | relative_url }}">Libros</a><a href="{{ '/blog/' | relative_url }}">Blog</a><a href="{{ '/biografia.html' | relative_url }}">Biografía</a><a href="{{ '/#obra' | relative_url }}">Obra</a><a href="{{ '/#cultura' | relative_url }}">Cultura</a><a href="{{ '/#contacto' | relative_url }}">Contacto</a><span><a href="https://www.facebook.com/maribel.benitez.754">Facebook</a><a href="mailto:benitezosoriomaribel@gmail.com">Correo</a></span></nav></header>
 <main>
 <section class="blog-hero"><div class="wrap"><p class="eyebrow">Blog de la autora</p><h1>Palabras, ideas<br>y encuentros</h1><p>Un espacio para compartir literatura, educación, cultura, paz y el oficio de escribir.</p></div></section>
 <section class="section blog-page"><div class="wrap">
@@ -22,7 +22,7 @@ permalink: /blog/
 {% if site.posts.size > 0 %}
   {% for post in site.posts %}
   <article class="blog-card{% if forloop.first %} blog-feature{% endif %}">
-    {% if post.image %}<div class="blog-image"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}"></div>{% endif %}
+    {% if post.image %}<div class="blog-image"><img src="{{ post.image }}" alt="{{ post.title | escape }}"></div>{% endif %}
     <div>
       <p class="eyebrow">{{ post.category }}</p>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
