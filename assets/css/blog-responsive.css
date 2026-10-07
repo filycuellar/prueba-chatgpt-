@@ -1,0 +1,33 @@
+/* Responsive blog media — images scale without forcing a fixed card height */
+.blog-feature{align-items:center!important;}
+.blog-feature .blog-image{
+  height:auto!important;
+  min-height:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+  padding:0!important;
+}
+.blog-feature .blog-image img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:420px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.post-hero-image{
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  height:auto!important;
+  max-height:70vh!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  object-fit:contain!important;
+}
+@media(max-width:800px){
+  .blog-feature .blog-image img{max-height:360px!important;}
+  .post-hero-image{max-height:none!important;width:100%!important;}
+}
