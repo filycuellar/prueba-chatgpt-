@@ -117,3 +117,51 @@ if(authorPortrait&&culturePortrait){
   authorPortrait.src='assets/maribel-cultura.png';
   culturePortrait.src='assets/maribel-hero.png';
 }
+
+/* Published works and recognitions — Maribel 2026 supplied list. */
+const obraWrap=document.querySelector('#obra .wrap');
+if(obraWrap){
+  const movements=[...obraWrap.querySelectorAll('.movement')];
+  const render=(el,num,label,title,items)=>{
+    if(!el)return;
+    el.innerHTML=`<div class="movement-head"><b>${num}</b><div><p class="eyebrow">${label}</p><h3>${title}</h3></div></div><div class="work-list">${items.map(i=>`<p><em>${i[0]}</em><strong>${i[1]}</strong><span>${i[2]||''}</span></p>`).join('')}</div>`;
+  };
+  render(movements[0],'I','Libros individuales','Obra publicada',[
+    ['2014','Frases y Pensamientos de superación personal',''],
+    ['2016','¡Aquí tierra llamando al humano! ¡Rescatemos los valores!',''],
+    ['2018','Las moléculas juguetonas',''],
+    ['2019','Ilusiones al vuelo',''],
+    ['2025','Las moléculas juguetonas · 2a edición','Best Seller en Amazon'],
+    ['2025','Audiocuento: Las moléculas juguetonas',''],
+    ['2020','Ciudad de Robots y otros cuentos para reflexionar','Versión en inglés y español'],
+    ['2021','Ciudad de Robots y otros cuentos para reflexionar, lectura y redacción','Versión en inglés y español · Best Seller en Amazon'],
+    ['2021','Huellas del tiempo',''],
+    ['2023','Mente Imparable sueños de Amor, Magia y Aventuras','Best Seller en Amazon'],
+    ['2024','Unstoppable Mind; Dreams of Love. Magic and Adventures','Best Seller en Amazon'],
+    ['2024','Secretos Para Escribir y Publicar tu libro','Best Seller en Amazon'],
+    ['2025','Manual de Azomalli','Estrategias grupales e individuales para fomentar la paz'],
+    ['2026','Azomalli; La superheroína de la paz','']
+  ]);
+  render(movements[1],'II','Antologías compiladas','Voces compartidas',[
+    ['2018','Entre verso y cuento baila la tinta',''],
+    ['2018','Vientos de Paz',''],
+    ['2019','Pasos hacia la paz',''],
+    ['2019','Dos tazas de Romance',''],
+    ['2019','Caricias Rosas',''],
+    ['2019','Recorrido Poético Mexiquense',''],
+    ['2022','Mujeres Guerreras. Vidas que inspiran: Homenaje',''],
+    ['2022','Recorrido Mexicano; una mirada poética','Editorial CIGOME · Homenaje a los estados de la República'],
+    ['2024','Voces por la paz y el Medio Ambiente',''],
+    ['2026','Diálogos Jurídicos; Miradas interdisciplinarias en busca de paz','']
+  ]);
+  render(movements[2],'III','Reconocimientos','Distinciones',[
+    ['2019','Premio Gaviota Internacional',''],
+    ['2023','Mujer Líder','Fundación Cultural Forjadores de México'],
+    ['2024','Galardón Forjadores de México','Cultura de Paz y Derechos Humanos'],
+    ['2019 · 2021 · 2023','Reconocimiento al Mérito Humanitario','Hayek Production International'],
+    ['2022–2026','Premio Las Palmas de México',''],
+    ['2024','Pergamino al Mérito Educativo “Laura Méndez de Cuenca”','Sociedad de Geografía y Estadística del Estado de México'],
+    ['—','Pergamino al Mérito Humanista “Ifigenia Martínez Hernández”','Sociedad de Geografía y Estadística del Estado de México · Cámara de Diputados'],
+    ['—','Doctorado Honoris Causa','Universidad Internacional de Desarrollo Humano y Liderazgo e Instituto Universitario UEEM']
+  ]);
+}
