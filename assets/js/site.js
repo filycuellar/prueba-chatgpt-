@@ -208,3 +208,18 @@ proseStyle.textContent=`
   }
 `;
 document.head.appendChild(proseStyle);
+
+/* QUICIO builder credit — subtle brand mark in every site footer. */
+const siteFooter=document.querySelector('footer');
+if(siteFooter && !siteFooter.querySelector('.quicio-credit')){
+  const scriptEl=[...document.scripts].find(s=>s.src.includes('/assets/js/site.js'));
+  const logoUrl=scriptEl ? new URL('../quicio-logo.svg',scriptEl.src).href : 'assets/quicio-logo.svg';
+  const credit=document.createElement('div');
+  credit.className='quicio-credit';
+  credit.setAttribute('aria-label','Sitio construido por QUICIO');
+  credit.innerHTML=`<img src="${logoUrl}" alt="QUICIO"><span>Sitio construido por <strong>QUICIO</strong></span>`;
+  credit.style.cssText='display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);width:min(360px,90%);font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.72';
+  const logo=credit.querySelector('img');
+  if(logo) logo.style.cssText='width:22px;height:22px;object-fit:contain;border-radius:7px;flex:0 0 auto';
+  siteFooter.appendChild(credit);
+}
