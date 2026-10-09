@@ -165,3 +165,18 @@ if(obraWrap){
     ['—','Doctorado Honoris Causa','Universidad Internacional de Desarrollo Humano y Liderazgo e Instituto Universitario UEEM']
   ]);
 }
+
+/* Editorial reading alignment: GRUEM body copy must be justified. */
+const gruem=document.querySelector('#gruem');
+if(gruem){
+  const s=document.createElement('style');
+  s.textContent=`
+    #gruem .dark-intro,
+    #gruem .three p{
+      text-align:justify!important;
+      text-justify:inter-word;
+      hyphens:auto;
+    }
+  `;
+  document.head.appendChild(s);
+}
