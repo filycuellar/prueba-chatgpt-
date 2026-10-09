@@ -186,7 +186,19 @@ proseStyle.textContent=`
     hyphens:auto;
   }
 
-  /* Keep labels, subtitles and structured rows visually intentional. */
+  /* Center the GRUEM introductory paragraph as a block, while keeping its text justified. */
+  #gruem .dark-intro{
+    width:min(760px,100%)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  /* Short GRUEM descriptions need the final line distributed too, otherwise they still look left-aligned. */
+  #gruem .three p{
+    text-align-last:justify!important;
+  }
+
+  /* Preserve intentional non-body text alignment. */
   .hero p,
   .eyebrow,
   .lead,
