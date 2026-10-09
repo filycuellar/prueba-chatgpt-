@@ -166,17 +166,33 @@ if(obraWrap){
   ]);
 }
 
-/* Editorial reading alignment: GRUEM body copy must be justified. */
-const gruem=document.querySelector('#gruem');
-if(gruem){
-  const s=document.createElement('style');
-  s.textContent=`
-    #gruem .dark-intro,
-    #gruem .three p{
-      text-align:justify!important;
-      text-justify:inter-word;
-      hyphens:auto;
-    }
-  `;
-  document.head.appendChild(s);
-}
+/* Consistent editorial alignment for all homepage reading paragraphs. */
+const proseStyle=document.createElement('style');
+proseStyle.textContent=`
+  .books .intro,
+  .featured p:not(.eyebrow),
+  .book p:not(.eyebrow),
+  .author-grid>div:last-child>p,
+  #gruem .dark-intro,
+  #gruem .three p,
+  .culture-copy>p:not(.eyebrow),
+  .steps article p,
+  .editorial-grid>div:first-child>p:not(.eyebrow):not(.lead),
+  .editorial-points p,
+  .contact>.wrap>p:not(.eyebrow),
+  .contact .news>p:not(.eyebrow){
+    text-align:justify!important;
+    text-justify:inter-word;
+    hyphens:auto;
+  }
+
+  /* Keep labels, subtitles and structured rows visually intentional. */
+  .hero p,
+  .eyebrow,
+  .lead,
+  .location,
+  .work-list p{
+    text-align:inherit;
+  }
+`;
+document.head.appendChild(proseStyle);
