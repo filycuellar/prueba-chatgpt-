@@ -109,3 +109,11 @@ if(document.querySelector('.header-featured')){
   }`;
   document.head.appendChild(s);
 }
+
+/* Maribel requested photo swap: writing portrait replaces the red-suit portrait. */
+const authorPortrait=document.querySelector('#autora .portrait img');
+const culturePortrait=document.querySelector('#cultura .culture-image img');
+if(authorPortrait&&culturePortrait){
+  authorPortrait.src='assets/maribel-cultura.png';
+  culturePortrait.src='assets/maribel-hero.png';
+}
