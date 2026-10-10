@@ -822,3 +822,27 @@ body .hero>.hero-copy{padding:20px 2vw 20px 0!important}
     letter-spacing:.10em!important;
   }
 }
+
+/* GRUEM: consistent column alignment without stretched word spacing. */
+#gruem .three {
+  align-items: start;
+}
+#gruem .three > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+#gruem .three h3 {
+  margin: 0 0 18px;
+  line-height: 1.2;
+  text-align: left !important;
+}
+#gruem .three p {
+  margin: 0;
+  text-align: left !important;
+  text-align-last: auto !important;
+  text-justify: auto !important;
+  word-spacing: normal !important;
+  letter-spacing: normal;
+  line-height: 1.75;
+}
