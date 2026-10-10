@@ -118,15 +118,15 @@ if(authorPortrait&&culturePortrait){
   culturePortrait.src='assets/maribel-hero.png';
 }
 
-/* Azomalli bestseller label, displayed with the featured cover. */
-const azomalliCover=document.querySelector('#libros .featured .cover');
-if(azomalliCover&&!azomalliCover.querySelector('.bestseller-badge')){
+/* Matching Amazon badges under every linked book cover. */
+document.querySelectorAll('#libros a.cover[href*="amazon."]').forEach(cover=>{
+  if(cover.querySelector('.bestseller-badge'))return;
   const badge=document.createElement('span');
   badge.className='bestseller-badge';
   badge.textContent='Best Seller en Amazon';
   badge.style.cssText='display:block;width:max-content;max-width:100%;margin:16px auto 0;padding:7px 12px;border:1px solid #B59A6A;color:#542536;background:#FFFDF9;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-align:center';
-  azomalliCover.appendChild(badge);
-}
+  cover.appendChild(badge);
+});
 
 /* Published works and recognitions — Maribel 2026 supplied list. */
 const obraWrap=document.querySelector('#obra .wrap');
