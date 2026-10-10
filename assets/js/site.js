@@ -118,6 +118,16 @@ if(authorPortrait&&culturePortrait){
   culturePortrait.src='assets/maribel-hero.png';
 }
 
+/* Azomalli bestseller label, displayed with the featured cover. */
+const azomalliCover=document.querySelector('#libros .featured .cover');
+if(azomalliCover&&!azomalliCover.querySelector('.bestseller-badge')){
+  const badge=document.createElement('span');
+  badge.className='bestseller-badge';
+  badge.textContent='Best Seller en Amazon';
+  badge.style.cssText='display:block;width:max-content;max-width:100%;margin:16px auto 0;padding:7px 12px;border:1px solid #B59A6A;color:#542536;background:#FFFDF9;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-align:center';
+  azomalliCover.appendChild(badge);
+}
+
 /* Published works and recognitions — Maribel 2026 supplied list. */
 const obraWrap=document.querySelector('#obra .wrap');
 if(obraWrap){
@@ -140,7 +150,7 @@ if(obraWrap){
     ['2024','Unstoppable Mind; Dreams of Love. Magic and Adventures','Best Seller en Amazon'],
     ['2024','Secretos Para Escribir y Publicar tu libro','Best Seller en Amazon'],
     ['2025','Manual de Azomalli','Estrategias grupales e individuales para fomentar la paz'],
-    ['2026','Azomalli; La superheroína de la paz','']
+    ['2026','Azomalli; La superheroína de la paz','Best Seller en Amazon']
   ]);
   render(movements[1],'II','Antologías compiladas','Voces compartidas',[
     ['2018','Entre verso y cuento baila la tinta',''],
@@ -148,9 +158,9 @@ if(obraWrap){
     ['2019','Pasos hacia la paz',''],
     ['2019','Dos tazas de Romance',''],
     ['2019','Caricias Rosas',''],
-    ['2019','Recorrido Poético Mexiquense',''],
+    ['2019','Recorrido Poético Mexiquense','Homenaje a los 125 Municipios del Estado de México'],
     ['2022','Mujeres Guerreras. Vidas que inspiran: Homenaje',''],
-    ['2022','Recorrido Mexicano; una mirada poética','Editorial CIGOME · Homenaje a los estados de la República'],
+    ['2022','Recorrido Mexicano; una mirada poética','Homenaje a los estados de la República'],
     ['2024','Voces por la paz y el Medio Ambiente',''],
     ['2026','Diálogos Jurídicos; Miradas interdisciplinarias en busca de paz','']
   ]);
