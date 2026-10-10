@@ -165,8 +165,8 @@ if(obraWrap){
     ['—','Doctorado Honoris Causa','Universidad Internacional de Desarrollo Humano y Liderazgo e Instituto Universitario UEEM']
   ]);
 
-  /* Keep the long I and II trajectories compact: centered title + two-column list. */
-  [movements[0],movements[1]].forEach(m=>m&&m.classList.add('movement-compact'));
+  /* Keep I, II and III compact: centered heading + two-column list on desktop. */
+  [movements[0],movements[1],movements[2]].forEach(m=>m&&m.classList.add('movement-compact'));
   const worksCompactStyle=document.createElement('style');
   worksCompactStyle.textContent=`
     #obra .movement-compact{
