@@ -164,6 +164,82 @@ if(obraWrap){
     ['—','Pergamino al Mérito Humanista “Ifigenia Martínez Hernández”','Sociedad de Geografía y Estadística del Estado de México · Cámara de Diputados'],
     ['—','Doctorado Honoris Causa','Universidad Internacional de Desarrollo Humano y Liderazgo e Instituto Universitario UEEM']
   ]);
+
+  /* Keep the long I and II trajectories compact: centered title + two-column list. */
+  [movements[0],movements[1]].forEach(m=>m&&m.classList.add('movement-compact'));
+  const worksCompactStyle=document.createElement('style');
+  worksCompactStyle.textContent=`
+    #obra .movement-compact{
+      display:block!important;
+      padding:58px 0!important;
+    }
+    #obra .movement-compact .movement-head{
+      display:flex!important;
+      flex-direction:column!important;
+      align-items:center!important;
+      justify-content:center!important;
+      gap:8px!important;
+      margin:0 auto 34px!important;
+      text-align:center!important;
+    }
+    #obra .movement-compact .movement-head>b{
+      font-size:58px!important;
+      line-height:.82!important;
+    }
+    #obra .movement-compact .movement-head .eyebrow{
+      margin:0 0 7px!important;
+      text-align:center!important;
+    }
+    #obra .movement-compact .movement-head h3{
+      margin:0!important;
+      text-align:center!important;
+    }
+    #obra .movement-compact .work-list{
+      display:grid!important;
+      grid-template-columns:repeat(2,minmax(0,1fr))!important;
+      column-gap:48px!important;
+      row-gap:0!important;
+    }
+    #obra .movement-compact .work-list p{
+      display:grid!important;
+      grid-template-columns:58px minmax(0,1fr)!important;
+      gap:6px 14px!important;
+      align-content:start!important;
+      padding:17px 0!important;
+      margin:0!important;
+      border-top:1px solid var(--line)!important;
+    }
+    #obra .movement-compact .work-list p:nth-child(-n+2){
+      border-top:0!important;
+    }
+    #obra .movement-compact .work-list em{
+      grid-column:1!important;
+      grid-row:1 / span 2!important;
+      font-size:20px!important;
+    }
+    #obra .movement-compact .work-list strong{
+      grid-column:2!important;
+      font-size:20px!important;
+      line-height:1.15!important;
+    }
+    #obra .movement-compact .work-list span{
+      grid-column:2!important;
+      font-size:11px!important;
+      line-height:1.4!important;
+    }
+    @media(max-width:800px){
+      #obra .movement-compact{
+        padding:48px 0!important;
+      }
+      #obra .movement-compact .work-list{
+        grid-template-columns:1fr!important;
+      }
+      #obra .movement-compact .work-list p:nth-child(2){
+        border-top:1px solid var(--line)!important;
+      }
+    }
+  `;
+  document.head.appendChild(worksCompactStyle);
 }
 
 /* Consistent editorial alignment for all homepage reading paragraphs. */
