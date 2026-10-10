@@ -324,6 +324,12 @@ authorFlowStyle.textContent=`
 `;
 document.head.appendChild(authorFlowStyle);
 
+/* GRUEM serves as the visual group mark in this section. */
+const gruemLabel=document.querySelector('#gruem .eyebrow.gold');
+if(gruemLabel){
+  gruemLabel.style.cssText='font-family:"Cormorant Garamond",serif;font-size:clamp(34px,5vw,58px);font-weight:600;line-height:.9;letter-spacing:.06em;margin:0 0 18px;text-align:center';
+}
+
 /* QUICIO builder credit — subtle brand mark in every site footer. */
 const siteFooter=document.querySelector('footer');
 if(siteFooter && !siteFooter.querySelector('.quicio-credit')){
