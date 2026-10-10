@@ -311,8 +311,16 @@ authorFlowStyle.textContent=`
     margin:36px auto 30px;
   }
   @media (min-width:801px){
+    #autora .author-grid{
+      grid-template-columns:minmax(0,44%) 1fr!important;
+      gap:7vw!important;
+    }
+    #autora .portrait{
+      width:100%!important;
+    }
     #autora .portrait img{
-      width:min(100%,430px)!important;
+      width:min(100%,460px)!important;
+      max-width:460px!important;
     }
   }
   @media (max-width:800px){
