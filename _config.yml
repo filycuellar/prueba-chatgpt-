@@ -1,8 +1,8 @@
 title: Maribel Benítez Osorio
-description: Sitio oficial de Maribel Benítez Osorio
-lang: es
-url: "https://filycuellar.github.io"
-baseurl: "/prueba_maribel"
+description: Sitio oficial de Maribel Benítez Osorio, escritora, poeta, antologadora, editora y promotora cultural en Toluca, Estado de México.
+lang: es-MX
+url: "https://maribelbenitezosorio.vercel.app"
+baseurl: ""
 permalink: /blog/:year/:month/:day/:title/
 defaults:
   - scope:
