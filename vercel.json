@@ -1,0 +1,18 @@
+{
+  "framework": "jekyll",
+  "installCommand": "bundle install",
+  "buildCommand": "bundle exec jekyll build --baseurl \"\" --url https://maribel-benitez-osorio.vercel.app",
+  "outputDirectory": "_site",
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://filycuellar.github.io/prueba_maribel/admin/",
+      "permanent": false
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "https://filycuellar.github.io/prueba_maribel/admin/:path*",
+      "permanent": false
+    }
+  ]
+}
