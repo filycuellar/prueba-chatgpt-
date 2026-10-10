@@ -173,6 +173,7 @@ proseStyle.textContent=`
   .featured p:not(.eyebrow),
   .book p:not(.eyebrow),
   .author-grid>div:last-child>p,
+  #autora .author-continuation>p,
   #gruem .dark-intro,
   #gruem .three p,
   .culture-copy>p:not(.eyebrow),
@@ -186,19 +187,16 @@ proseStyle.textContent=`
     hyphens:auto;
   }
 
-  /* Center the GRUEM introductory paragraph as a block, while keeping its text justified. */
   #gruem .dark-intro{
     width:min(760px,100%)!important;
     margin-left:auto!important;
     margin-right:auto!important;
   }
 
-  /* Short GRUEM descriptions need the final line distributed too, otherwise they still look left-aligned. */
   #gruem .three p{
     text-align-last:justify!important;
   }
 
-  /* Preserve intentional non-body text alignment. */
   .hero p,
   .eyebrow,
   .lead,
@@ -209,32 +207,46 @@ proseStyle.textContent=`
 `;
 document.head.appendChild(proseStyle);
 
-/* Balance La autora exactly against the full biography column. */
-const balanceAuthorPortrait=()=>{
-  const grid=document.querySelector('#autora .author-grid');
-  if(!grid)return;
-  const portrait=grid.querySelector('.portrait');
-  const copy=grid.children[1];
-  if(!portrait||!copy)return;
-
-  portrait.style.transform='';
-  portrait.style.marginTop='';
-  portrait.style.alignSelf='start';
-
-  if(window.innerWidth>800){
-    const portraitHeight=portrait.getBoundingClientRect().height;
-    const copyHeight=copy.getBoundingClientRect().height;
-    const offset=Math.max(0,Math.round((copyHeight-portraitHeight)/2));
-    portrait.style.transform=`translateY(${offset}px)`;
+/* La autora: keep the opening beside the portrait, then use the full width below it. */
+const authorFlowStyle=document.createElement('style');
+authorFlowStyle.textContent=`
+  #autora .author-grid{
+    align-items:start!important;
   }
-};
-
-window.addEventListener('load',balanceAuthorPortrait);
-window.addEventListener('resize',balanceAuthorPortrait);
-if(document.fonts&&document.fonts.ready){
-  document.fonts.ready.then(balanceAuthorPortrait);
-}
-requestAnimationFrame(()=>requestAnimationFrame(balanceAuthorPortrait));
+  #autora .portrait{
+    align-self:start!important;
+  }
+  #autora .portrait img{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  #autora .author-continuation{
+    margin-top:38px;
+    padding-top:30px;
+    border-top:1px solid rgba(181,154,106,.42);
+  }
+  #autora .author-continuation>p{
+    width:100%!important;
+    max-width:none!important;
+    margin:0 0 18px;
+  }
+  #autora .author-continuation blockquote{
+    max-width:980px;
+    margin:36px auto 30px;
+  }
+  @media (min-width:801px){
+    #autora .portrait img{
+      width:min(100%,430px)!important;
+    }
+  }
+  @media (max-width:800px){
+    #autora .author-continuation{
+      margin-top:26px;
+      padding-top:24px;
+    }
+  }
+`;
+document.head.appendChild(authorFlowStyle);
 
 /* QUICIO builder credit — subtle brand mark in every site footer. */
 const siteFooter=document.querySelector('footer');
