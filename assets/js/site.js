@@ -160,7 +160,7 @@ if(obraWrap){
     ['2019','Caricias Rosas',''],
     ['2019','Recorrido Poético Mexiquense','Homenaje a los 125 Municipios del Estado de México'],
     ['2022','Mujeres Guerreras. Vidas que inspiran: Homenaje',''],
-    ['2022','Recorrido Mexicano; una mirada poética','Homenaje a los estados de la República'],
+    ['2022','Recorrido Mexicano; una mirada poética','Homenaje a los Estados de la República Mexicana'],
     ['2024','Voces por la paz y el Medio Ambiente',''],
     ['2026','Diálogos Jurídicos; Miradas interdisciplinarias en busca de paz','']
   ]);
