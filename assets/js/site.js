@@ -261,7 +261,6 @@ proseStyle.textContent=`
   .author-grid>div:last-child>p,
   #autora .author-continuation>p,
   #gruem .dark-intro,
-  #gruem .three p,
   .culture-copy>p:not(.eyebrow),
   .steps article p,
   .editorial-grid>div:first-child>p:not(.eyebrow):not(.lead),
@@ -280,7 +279,10 @@ proseStyle.textContent=`
   }
 
   #gruem .three p{
-    text-align-last:justify!important;
+    text-align:left!important;
+    text-align-last:auto!important;
+    text-justify:auto!important;
+    word-spacing:normal!important;
   }
 
   .hero p,
