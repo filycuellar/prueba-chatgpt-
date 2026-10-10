@@ -209,33 +209,32 @@ proseStyle.textContent=`
 `;
 document.head.appendChild(proseStyle);
 
-/* Balance the La autora block: center the portrait against the taller text column. */
-const authorLayoutStyle=document.createElement('style');
-authorLayoutStyle.textContent=`
-  @media (min-width:801px){
-    #autora .author-grid{
-      align-items:center!important;
-    }
-    #autora .portrait{
-      display:flex!important;
-      align-items:center!important;
-      justify-content:center!important;
-      align-self:center!important;
-    }
-    #autora .portrait img{
-      width:min(100%,430px)!important;
-      margin-left:auto!important;
-      margin-right:auto!important;
-    }
+/* Balance La autora exactly against the full biography column. */
+const balanceAuthorPortrait=()=>{
+  const grid=document.querySelector('#autora .author-grid');
+  if(!grid)return;
+  const portrait=grid.querySelector('.portrait');
+  const copy=grid.children[1];
+  if(!portrait||!copy)return;
+
+  portrait.style.transform='';
+  portrait.style.marginTop='';
+  portrait.style.alignSelf='start';
+
+  if(window.innerWidth>800){
+    const portraitHeight=portrait.getBoundingClientRect().height;
+    const copyHeight=copy.getBoundingClientRect().height;
+    const offset=Math.max(0,Math.round((copyHeight-portraitHeight)/2));
+    portrait.style.transform=`translateY(${offset}px)`;
   }
-  @media (max-width:800px){
-    #autora .portrait img{
-      margin-left:auto!important;
-      margin-right:auto!important;
-    }
-  }
-`;
-document.head.appendChild(authorLayoutStyle);
+};
+
+window.addEventListener('load',balanceAuthorPortrait);
+window.addEventListener('resize',balanceAuthorPortrait);
+if(document.fonts&&document.fonts.ready){
+  document.fonts.ready.then(balanceAuthorPortrait);
+}
+requestAnimationFrame(()=>requestAnimationFrame(balanceAuthorPortrait));
 
 /* QUICIO builder credit — subtle brand mark in every site footer. */
 const siteFooter=document.querySelector('footer');
