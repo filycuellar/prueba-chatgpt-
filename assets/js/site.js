@@ -209,6 +209,34 @@ proseStyle.textContent=`
 `;
 document.head.appendChild(proseStyle);
 
+/* Balance the La autora block: center the portrait against the taller text column. */
+const authorLayoutStyle=document.createElement('style');
+authorLayoutStyle.textContent=`
+  @media (min-width:801px){
+    #autora .author-grid{
+      align-items:center!important;
+    }
+    #autora .portrait{
+      display:flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      align-self:center!important;
+    }
+    #autora .portrait img{
+      width:min(100%,430px)!important;
+      margin-left:auto!important;
+      margin-right:auto!important;
+    }
+  }
+  @media (max-width:800px){
+    #autora .portrait img{
+      margin-left:auto!important;
+      margin-right:auto!important;
+    }
+  }
+`;
+document.head.appendChild(authorLayoutStyle);
+
 /* QUICIO builder credit — subtle brand mark in every site footer. */
 const siteFooter=document.querySelector('footer');
 if(siteFooter && !siteFooter.querySelector('.quicio-credit')){
